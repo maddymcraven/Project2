@@ -73,15 +73,16 @@ def happiness():
     all_countries = []
     for Country, Region, Hemisphere, HappinessScore, HDI, GDP_PerCapita, Beer_PerCapita, Spirit_PerCapita, Wine_PerCapita in results:
         country_dict = {}
-        country_dict["Country"] = Country
-        country_dict["Region"] = Region
-        country_dict["Hemisphere"] = Hemisphere
-        country_dict["HappinessScore"] = HappinessScore
-        country_dict["HDI"] = HDI
-        country_dict["GDP_PerCapita"] = GDP_PerCapita
-        country_dict["Beer_PerCapita"] = Beer_PerCapita
-        country_dict["Spirit_PerCapita"] = Spirit_PerCapita
-        country_dict["Wine_PerCapita"] = Wine_PerCapita
+        country_dict["Country"] = Country,
+        country_dict["Region"] = Region,
+        country_dict["Hemisphere"] = Hemisphere,
+        country_dict["HappinessScore"] = HappinessScore,
+        country_dict["HDI"] = HDI,
+        country_dict["GDP_PerCapita"] = GDP_PerCapita,
+        country_dict["Beer_PerCapita"] = Beer_PerCapita,
+        country_dict["Spirit_PerCapita"] = Spirit_PerCapita,
+        country_dict["Wine_PerCapita"] = Wine_PerCapita,
+        all_countries.append(country_dict)
 
     return jsonify(all_countries)
 
