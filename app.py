@@ -5,7 +5,8 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, jsonify
+
+from flask import Flask, redirect, url_for, jsonify
 
 
 #################################################
@@ -24,12 +25,19 @@ happy = Base.classes.HappinessAlcoholConsumption
 #################################################
 # Flask Setup
 #################################################
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
 
 #################################################
 # Flask Routes
 #################################################
+
+
+
+@app.route('/')
+def root():
+    return redirect(url_for('static', filename='index.html'))
 
 @app.route("/all_data")
 def happiness():
