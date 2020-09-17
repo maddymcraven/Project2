@@ -54,25 +54,29 @@ var myChart = {
 		backgroundColor: "#caf270",
 		yAxisID: "y-axis-0",
 		data: beerlabels,
+		order: 2
 	}, {
 		type: 'bar',
 		label: 'Spirits',
 		backgroundColor: "#45c490",
 		yAxisID: "y-axis-0",
 		data: spiritlabels,
+		order: 3
 	}, {
 		type: 'bar',
 		label: 'Wine',
 		backgroundColor: "#008d93",
 		yAxisID: "y-axis-0",
 		data: winelabels,
+		order: 4
 	}, 
 	{
 		type: 'line',
 		label: 'Happiness Index',
-		yAxisID: "y-axis-0",
+		yAxisID: "y-axis-1",
 		backgroundColor: "maroon",
-		data: happylabels
+		data: happylabels,
+		order: 1
 	  }
 ],
 };
